@@ -1,2 +1,2 @@
 # MCUCode
-Some usefull code for MCU written in C.
+Some useful code for MCU written in C.
