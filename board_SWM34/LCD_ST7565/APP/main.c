@@ -1,6 +1,7 @@
 #include "SWM341.h"
 
 #include "ST7565.h"
+#include "LCD_Draw.h"
 
 
 void SerialInit(void);
@@ -13,13 +14,22 @@ int main(void)
 	
 	ST7565_Init();
 	
-	ST7565_Clear();
+	LCD_Draw_Init(128, 64, (LCD_DrawPoint_t)ST7565_Point, ST7565_Clear, 0);
 	
-	for(int x = 20; x < 80; x++)
-		ST7565_Point(x, 20, 1);
+	LCD_DrawClear();
 	
-	for(int y = 10; y < 60; y++)
-		ST7565_Point(40, y, 1);
+	LCD_DrawRect(0, 0, 127, 63, 1);
+	LCD_DrawRect(1, 1, 126, 62, 1);
+	
+	LCD_DrawBattery(100, 10, 2, 1);
+	
+	LCD_DrawSpeaker(80, 10, 1, 1);
+	
+	LCD_DrawSegment(20, 25, 9, 20, 30, 3, 1);
+	LCD_DrawSegment(50, 25, 7, 20, 30, 3, 1);
+	LCD_DrawCircle(82, 53, 1, 1);
+	LCD_DrawCircle(82, 53, 2, 1);
+	LCD_DrawSegment(95, 35, 6, 16, 20, 2, 1);
    	
 	while(1==1)
 	{
