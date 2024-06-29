@@ -7,7 +7,7 @@
 static inline void delayuS(uint16_t us);
 
 
-static inline void HWconfig(void)
+static inline void IOI2C_HW_Init(void)
 {
 	GPIO_Init(GPIOA, PIN1, 1, 1, 0, 1);		// SCL，open-drain output, pull-up
 	GPIO_Init(GPIOA, PIN0, 1, 1, 0, 1);		// SDA，open-drain output, pull-up
