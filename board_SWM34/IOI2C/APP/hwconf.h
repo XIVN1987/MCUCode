@@ -19,7 +19,8 @@ static inline void IOI2C_HW_Init(void)
 #define IOI2C_SDA_Value()	GPIO_GetBit(GPIOA, PIN0)
 
 #define IOI2C_SDA_IN()		GPIOA->DIR &= ~(0x01 << PIN0)
-#define IOI2C_SDA_OUT()		GPIOA->DIR |=  (0x01 << PIN0)
+/* when switch to output, we need keep SDA not change */
+#define IOI2C_SDA_OUT()		GPIO_WriteBit(GPIOA, PIN0, IOI2C_SDA_Value()); GPIOA->DIR |=  (0x01 << PIN0)
 }
 
 

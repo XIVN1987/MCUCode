@@ -14,6 +14,7 @@ void GPIO_Init(GPIO_TypeDef * GPIOx, uint32_t n, uint32_t dir, uint32_t pull_up,
 #define GPIO_INIT(GPIOx, n, mode)  GPIO_Init(GPIOx, n, (mode & 1) ? 1 : 0, (mode & 2) ? 1 : 0, (mode & 4) ? 1 : 0, (mode & 8) ? 1 : 0)
 
 
+void GPIO_WriteBit(GPIO_TypeDef * GPIOx, uint32_t n, uint32_t v);		//将参数指定的引脚设置为指定电平
 void GPIO_SetBit(GPIO_TypeDef * GPIOx, uint32_t n);						//将参数指定的引脚电平置高
 void GPIO_ClrBit(GPIO_TypeDef * GPIOx, uint32_t n);						//将参数指定的引脚电平置低
 void GPIO_InvBit(GPIO_TypeDef * GPIOx, uint32_t n);						//将参数指定的引脚电平反转
