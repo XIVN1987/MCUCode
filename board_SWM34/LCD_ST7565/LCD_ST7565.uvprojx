@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\CSL\CMSIS\CoreSupport;..\CSL\CMSIS\DeviceSupport;..\CSL\SWM341_StdPeriph_Driver;.\APP;..\..\LCD_Draw;..\..\LCD_ST7565</IncludePath>
+              <IncludePath>..\CSL\CMSIS\CoreSupport;..\CSL\CMSIS\DeviceSupport;..\CSL\SWM341_StdPeriph_Driver;.\APP;..\..\LCD_ST7565</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -392,11 +392,6 @@
               <FileName>ST7565.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\LCD_ST7565\ST7565.c</FilePath>
-            </File>
-            <File>
-              <FileName>LCD_Draw.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\LCD_Draw\LCD_Draw.c</FilePath>
             </File>
           </Files>
         </Group>
