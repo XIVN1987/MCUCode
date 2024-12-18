@@ -33,7 +33,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:SWM341xE$SVD\SWM341.svd</SFDFile>
+          <SFDFile>C:\Keil\ARM\SFD\SWM341.SFR</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\out\</OutputDirectory>
-          <OutputName>IOI2C</OutputName>
+          <OutputName>SWM341_demo</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver;..\SWM341\src\CSL\CMSIS\DeviceSupport;..\SWM341\src\CSL\CMSIS\CoreSupport;..\..\IOI2C;.\src</IncludePath>
+              <IncludePath>.\src\CSL\SWM341_StdPeriph_Driver;.\src\CSL\CMSIS\DeviceSupport;.\src\CSL\CMSIS\CoreSupport;.\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -388,95 +388,155 @@
               <FileType>1</FileType>
               <FilePath>.\src\main.c</FilePath>
             </File>
-            <File>
-              <FileName>IOI2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\IOI2C\IOI2C.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>CSL\StdPD</GroupName>
           <Files>
             <File>
-              <FileName>SWM341_adc.c</FileName>
+              <FileName>SWM341_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_adc.c</FilePath>
-            </File>
-            <File>
-              <FileName>SWM341_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_exti.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_port.c</FilePath>
             </File>
             <File>
               <FileName>SWM341_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_gpio.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>SWM341_i2c.c</FileName>
+              <FileName>SWM341_exti.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>SWM341_pwm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_pwm.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_exti.c</FilePath>
             </File>
             <File>
               <FileName>SWM341_timr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_timr.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_timr.c</FilePath>
             </File>
             <File>
               <FileName>SWM341_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_uart.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_uart.c</FilePath>
             </File>
             <File>
-              <FileName>SWM341_wdt.c</FileName>
+              <FileName>SWM341_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_wdt.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_adc.c</FilePath>
             </File>
             <File>
               <FileName>SWM341_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_dma.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_dma.c</FilePath>
             </File>
             <File>
-              <FileName>SWM341_flash.c</FileName>
+              <FileName>SWM341_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_flash.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>SWM341_port.c</FileName>
+              <FileName>SWM341_pwm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_port.c</FilePath>
-            </File>
-            <File>
-              <FileName>SWM341_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_spi.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_pwm.c</FilePath>
             </File>
             <File>
               <FileName>SWM341_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_can.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_can.c</FilePath>
             </File>
             <File>
-              <FileName>SWM341_crc.c</FileName>
+              <FileName>SWM341_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_crc.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_spi.c</FilePath>
             </File>
             <File>
               <FileName>SWM341_lcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_lcd.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_crc.c</FilePath>
             </File>
             <File>
               <FileName>SWM341_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_rtc.c</FilePath>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_wdt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_wdt.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_cordic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_cordic.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_sleep.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_sleep.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_usbd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_usbd.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_div.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_div.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_sdio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_sdio.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_sdram.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_jpeg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_jpeg.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_sfc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_sfc.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_dma2d.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_dma2d.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_iofilt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_iofilt.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_qei.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_qei.c</FilePath>
+            </File>
+            <File>
+              <FileName>SWM341_usbh.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\CSL\SWM341_StdPeriph_Driver\SWM341_usbh.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -486,12 +546,12 @@
             <File>
               <FileName>system_SWM341.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SWM341\src\CSL\CMSIS\DeviceSupport\system_SWM341.c</FilePath>
+              <FilePath>.\src\CSL\CMSIS\DeviceSupport\system_SWM341.c</FilePath>
             </File>
             <File>
               <FileName>startup_SWM341.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\SWM341\src\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM341.s</FilePath>
+              <FilePath>.\src\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM341.s</FilePath>
             </File>
           </Files>
         </Group>

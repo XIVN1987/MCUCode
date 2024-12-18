@@ -224,7 +224,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\app\main.c</PathWithFileName>
+      <PathWithFileName>.\src\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -245,7 +245,7 @@
 
   <Group>
     <GroupName>CSL\StdPD</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -256,7 +256,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_adc.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_adc.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -268,7 +268,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_exti.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_exti.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_exti.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -280,7 +280,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_gpio.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_gpio.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -292,7 +292,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_i2c.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_i2c.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_i2c.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -304,7 +304,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_pwm.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_pwm.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_pwm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -316,7 +316,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_timr.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_timr.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_timr.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -328,7 +328,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_uart.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_uart.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -340,7 +340,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_wdt.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_wdt.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_wdt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -352,7 +352,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_dma.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_dma.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_dma.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -364,7 +364,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_flash.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_flash.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_flash.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -376,7 +376,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_port.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_port.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_port.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -388,7 +388,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_spi.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_spi.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_spi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -400,7 +400,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_can.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_can.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_can.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -412,7 +412,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_crc.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_crc.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_crc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -424,7 +424,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_lcd.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_lcd.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_lcd.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -436,7 +436,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\SWM341_StdPeriph_Driver\SWM341_rtc.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\SWM341_StdPeriph_Driver\SWM341_rtc.c</PathWithFileName>
       <FilenameWithoutPath>SWM341_rtc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -456,7 +456,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\CMSIS\DeviceSupport\system_SWM341.c</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\CMSIS\DeviceSupport\system_SWM341.c</PathWithFileName>
       <FilenameWithoutPath>system_SWM341.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -468,7 +468,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM341.s</PathWithFileName>
+      <PathWithFileName>..\SWM341\src\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM341.s</PathWithFileName>
       <FilenameWithoutPath>startup_SWM341.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
