@@ -5,6 +5,8 @@ JLinkLog.txt
 JLinkSettings.ini
 EventRecorderStub.scvd
 
+build/
+
 # Prerequisites
 *.d
 
