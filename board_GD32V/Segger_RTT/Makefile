@@ -1,6 +1,6 @@
 BUILD_DIR = build
 
-TARGET = GD32VF103
+TARGET = Segger_RTT
 
 
 include CSL/Makefile
@@ -8,9 +8,12 @@ include CSL/Makefile
 
 C_SRCS += \
 	main.c \
+	RTT/SEGGER_RTT.c \
+	RTT/SEGGER_RTT_printf.c
 
 C_INCS += \
-	-I.
+	-I. \
+	-IRTT \
 
 
 ###############################################################################
