@@ -17,8 +17,8 @@ int main(void)
 	while(1)
 	{
 		GPIO_BC(LED_PORT) = LED_PIN;
-		for(int i = 0; i < SystemCoreClock; i++) __asm volatile ("nop");
+		for(int i = 0; i < SystemCoreClock/16; i++) __asm volatile ("nop");
 		GPIO_BOP(LED_PORT) = LED_PIN;
-		for(int i = 0; i < SystemCoreClock; i++) __asm volatile ("nop");
+		for(int i = 0; i < SystemCoreClock/16; i++) __asm volatile ("nop");
 	}
 }
