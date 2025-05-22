@@ -48,8 +48,8 @@ int main(void)
 		SEGGER_RTT_printf(0, "%d %d, ", Value, Value2);
 
 		GPIO_BC(LED_PORT) = LED_PIN;
-		for(int i = 0; i < SystemCoreClock/16; i++) __asm volatile ("nop");
+		for(int i = 0; i < SystemCoreClock/1600; i++) __asm volatile ("nop");
 		GPIO_BOP(LED_PORT) = LED_PIN;
-		for(int i = 0; i < SystemCoreClock/16; i++) __asm volatile ("nop");
+		for(int i = 0; i < SystemCoreClock/1600; i++) __asm volatile ("nop");
 	}
 }
