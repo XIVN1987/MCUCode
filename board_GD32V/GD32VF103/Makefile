@@ -3,14 +3,15 @@ BUILD_DIR = build
 TARGET = GD32VF103
 
 
-include CSL/Makefile
+CSL_DIR = CSL
+include $(CSL_DIR)/Makefile
 
 
 C_SRCS += \
 	main.c \
 
 C_INCS += \
-	-I.
+	-I. \
 
 
 ###############################################################################
@@ -36,10 +37,8 @@ LDFLAGS+= -g $(OPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref
 ###############################################################################
 #
 
-all: \
-	$(BUILD_DIR)/$(TARGET).elf \
-	$(BUILD_DIR)/$(TARGET).bin \
-	$(BUILD_DIR)/$(TARGET).dis \
+all: $(BUILD_DIR)/$(TARGET).bin $(BUILD_DIR)/$(TARGET).dis
+
 
 # list of objects
 OBJS = $(addprefix $(BUILD_DIR)/,$(C_SRCS:.c=.o))
@@ -49,25 +48,23 @@ DEPS = $(addprefix $(BUILD_DIR)/,$(C_SRCS:.c=.d))
 OBJS+= $(addprefix $(BUILD_DIR)/,$(S_SRCS:.S=.o))
 DEPS+= $(addprefix $(BUILD_DIR)/,$(S_SRCS:.S=.d))
 
-$(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR)
+
+$(BUILD_DIR)/%.o: %.c
 	mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) $< -o $@
 
-$(BUILD_DIR)/%.o: %.S Makefile | $(BUILD_DIR)
+$(BUILD_DIR)/%.o: %.S
 	mkdir -p $(dir $@)
 	$(AS) -c $(SFLAGS) $< -o $@
 
-$(BUILD_DIR)/$(TARGET).elf: $(OBJS) Makefile CSL/Makefile | $(BUILD_DIR)
+$(BUILD_DIR)/$(TARGET).elf: $(OBJS)
 	$(CC) $(OBJS) $(LDFLAGS) -o $@
 
-$(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
+$(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf
 	$(COPY) -O binary -S $< $@
 
-$(BUILD_DIR)/%.dis: $(BUILD_DIR)/%.elf | $(BUILD_DIR)
+$(BUILD_DIR)/%.dis: $(BUILD_DIR)/%.elf
 	$(DUMP) -d $< > $@
-
-$(BUILD_DIR):
-	mkdir $@
 
 clean:
 	rm -rf $(BUILD_DIR)
