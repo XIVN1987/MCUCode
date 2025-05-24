@@ -1,16 +1,24 @@
 
 C_SRCS = \
-	CSL/RISCV/core/n200_func.c \
 	CSL/RISCV/stubs/sbrk.c \
+	CSL/RISCV/core/n200_func.c \
 	CSL/RISCV/startup/handlers.c \
 	CSL/GD32VF103_standard_peripheral/system_gd32vf103.c \
-	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c \
 	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_rcu.c \
-	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_timer.c \
-	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_adc.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_dbg.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_dma.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_fmc.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_can.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_i2c.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_spi.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c \
 	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_exti.c \
-	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_pmu.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_timer.c \
 	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_usart.c \
+	CSL/GD32VF103_standard_peripheral/Source/gd32vf103_wwdgt.c \
 
 C_INCS = \
 	-I$(CSL_DIR) \

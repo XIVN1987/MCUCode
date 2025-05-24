@@ -16,7 +16,11 @@ CFLAGS += -fdata-sections -ffunction-sections -MMD -MF"$(@:%.o=%.d)"
 SFLAGS += $(OPT) $(C_DEFS) $(C_INCS) $(S_DEFS) $(S_INCS)
 SFLAGS += -fdata-sections -ffunction-sections -MMD -MF"$(@:%.o=%.d)"
 
+ifdef LD_NO_GC
+LDFLAGS+= $(OPT) $(LIBS) $(LIBDIR) -T$(LDSCRIPT) -Wl,-Map=$(BUILD_DIR)/$(EXE).map,--cref
+else
 LDFLAGS+= $(OPT) $(LIBS) $(LIBDIR) -T$(LDSCRIPT) -Wl,-Map=$(BUILD_DIR)/$(EXE).map,--cref -Wl,--gc-sections
+endif
 
 
 OBJS = $(addprefix $(BUILD_DIR)/,$(C_SRCS:.c=.o) $(S_SRCS:.S=.o))
