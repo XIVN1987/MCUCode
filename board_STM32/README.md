@@ -1,9 +1,9 @@
-# STM32RC
-STM32F103RC demo board, used for code testing.
+# STM32C8
+STM32F103C8 demo board, used for code testing.
 
-view board Sch & PCB online: [https://oshwhub.com/xivn1987/STM32RC](https://oshwhub.com/xivn1987/STM32RC)
+view board Sch & PCB online: [https://oshwhub.com/xivn1987/stm32c8](https://oshwhub.com/xivn1987/stm32c8)
 
-![](./STM32RC.png)
+![](./STM32C8.png)
 
 
 # STM32VG
