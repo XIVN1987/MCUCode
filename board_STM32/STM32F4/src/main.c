@@ -11,23 +11,24 @@ int main(void)
 	
 	SerialInit();
 	
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_13;			// LED
+	GPIO_initStruct.GPIO_Pin = GPIO_Pin_15;			// KEY
+	GPIO_initStruct.GPIO_Mode = GPIO_Mode_IN;
+	GPIO_initStruct.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_Init(GPIOA, &GPIO_initStruct);
+	
+	GPIO_initStruct.GPIO_Pin = GPIO_Pin_15;			// LED
 	GPIO_initStruct.GPIO_Mode = GPIO_Mode_OUT;
 	GPIO_initStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_initStruct.GPIO_OType = GPIO_OType_PP;
 	GPIO_initStruct.GPIO_Speed = GPIO_Fast_Speed;
-	GPIO_Init(GPIOC, &GPIO_initStruct);
-	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_6;			// KEY
-	GPIO_initStruct.GPIO_Mode = GPIO_Mode_IN;
-	GPIO_initStruct.GPIO_PuPd = GPIO_PuPd_UP;
-	GPIO_Init(GPIOC, &GPIO_initStruct);
+	GPIO_Init(GPIOB, &GPIO_initStruct);
 	
 	while(1)
 	{
-		GPIO_WriteBit(GPIOC, GPIO_Pin_13, GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_13) ? Bit_RESET : Bit_SET);
+		GPIO_WriteBit(GPIOB, GPIO_Pin_15, GPIO_ReadOutputDataBit(GPIOB, GPIO_Pin_15) ? Bit_RESET : Bit_SET);
 		
 		printf("Hi From STM32F405\n");                                          
 		

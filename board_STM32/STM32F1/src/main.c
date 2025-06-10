@@ -12,20 +12,21 @@ int main(void)
 	
 	SerialInit();
 	
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
 	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_2;		// LED
+	GPIO_initStruct.GPIO_Pin = GPIO_Pin_15;		// KEY
+	GPIO_initStruct.GPIO_Mode = GPIO_Mode_IPU;
+	GPIO_Init(GPIOA, &GPIO_initStruct);
+	
+	GPIO_initStruct.GPIO_Pin = GPIO_Pin_15;		// LED
 	GPIO_initStruct.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_initStruct.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOC, &GPIO_initStruct);
-	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_4;		// KEY
-	GPIO_initStruct.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_Init(GPIOC, &GPIO_initStruct);
+	GPIO_Init(GPIOB, &GPIO_initStruct);
 	
 	while(1)
 	{
-		GPIO_WriteBit(GPIOC, GPIO_Pin_2, GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_2) ? Bit_RESET : Bit_SET);
+		GPIO_WriteBit(GPIOB, GPIO_Pin_15, GPIO_ReadOutputDataBit(GPIOB, GPIO_Pin_15) ? Bit_RESET : Bit_SET);
 		
 		printf("Hi from STM32F103\n");
 		

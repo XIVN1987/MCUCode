@@ -15,23 +15,24 @@ int main(void)
 	
 	SerialInit();
 	
-	crm_periph_clock_enable(CRM_GPIOC_PERIPH_CLOCK, TRUE);
+	crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);
+	crm_periph_clock_enable(CRM_GPIOB_PERIPH_CLOCK, TRUE);
 	
-	gpio_init_struct.gpio_pins = GPIO_PINS_13;		// LED
-	gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
-	gpio_init(GPIOC, &gpio_init_struct);
-	
-	gpio_init_struct.gpio_pins = GPIO_PINS_6;		// KEY
+	gpio_init_struct.gpio_pins = GPIO_PINS_15;		// KEY
 	gpio_init_struct.gpio_mode = GPIO_MODE_INPUT;
 	gpio_init_struct.gpio_pull = GPIO_PULL_UP;
-	gpio_init(GPIOC, &gpio_init_struct);
+	gpio_init(GPIOA, &gpio_init_struct);
+	
+	gpio_init_struct.gpio_pins = GPIO_PINS_15;		// LED
+	gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
+	gpio_init(GPIOB, &gpio_init_struct);
 	
 	while(1)
 	{
-		gpio_bits_write(GPIOC, GPIO_PINS_13, gpio_output_data_bit_read(GPIOC, GPIO_PINS_13) ? FALSE : TRUE);
+		gpio_bits_write(GPIOB, GPIO_PINS_15, gpio_output_data_bit_read(GPIOB, GPIO_PINS_15) ? FALSE : TRUE);
 		
-		if(gpio_input_data_bit_read(GPIOC, GPIO_PINS_6) == 0) printf("\r\nKey Pressed!\r\n\r\n");
-		else                                              	  printf("Hi From XIVN1987!\r\n");
+		if(gpio_input_data_bit_read(GPIOA, GPIO_PINS_15) == 0) printf("\r\nKey Pressed!\r\n\r\n");
+		else                                              	   printf("Hi From AT32F435!\r\n");
 		
 		for(int i = 0; i < system_core_clock / 10; i++) __NOP();
 	}
