@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "stm32f10x.h"
+#include "stm32f4xx.h"
 
 #include "SEGGER_RTT.h"
 
@@ -54,18 +54,18 @@ void SerialInit(void)
 	GPIO_InitTypeDef  GPIO_initStruct;
 	USART_InitTypeDef USART_initStruct;
 	
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
 	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_9;		// USART1_TX
-	GPIO_initStruct.GPIO_Mode = GPIO_Mode_AF_PP;
-	GPIO_initStruct.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_initStruct.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;
+	GPIO_initStruct.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_initStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	GPIO_initStruct.GPIO_OType = GPIO_OType_PP;
+	GPIO_initStruct.GPIO_Speed = GPIO_Fast_Speed;
 	GPIO_Init(GPIOA, &GPIO_initStruct);
 	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_10;		// USART1_RX
-	GPIO_initStruct.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_Init(GPIOA, &GPIO_initStruct);
-	
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource9,  GPIO_AF_USART1);	// USART1_TX
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource10, GPIO_AF_USART1);	// USART1_RX
 	
 	USART_initStruct.USART_BaudRate = 115200;
 	USART_initStruct.USART_WordLength = USART_WordLength_8b;
