@@ -30,7 +30,10 @@ int main(void)
 	{
 		GPIO_WriteBit(GPIOB, GPIO_Pin_15, GPIO_ReadOutputDataBit(GPIOB, GPIO_Pin_15) ? Bit_RESET : Bit_SET);
 		
-		printf("Hi From STM32F405\n");                                          
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_15) == 0)
+			printf("Key Pressed\n");
+		else
+			printf("Hi From STM32F405\n");                                          
 		
 		for(int i = 0; i < SystemCoreClock / 8; i++) __NOP();
 	}
