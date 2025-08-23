@@ -69,7 +69,7 @@ Original Author: Shay Gal-on
 #endif
 #endif
 #ifndef COMPILER_FLAGS
-#define COMPILER_FLAGS "-O2"
+#define COMPILER_FLAGS "-O3"
 #endif
 #ifndef MEM_LOCATION
 #define MEM_LOCATION "Flash"

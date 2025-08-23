@@ -26,7 +26,7 @@ C_DEFS += \
 	-DITERATIONS=4000 \
 
 
-OPT = -O2 -u _printf_float
+OPT = -O3 -u _printf_float
 
 LIBS =
 

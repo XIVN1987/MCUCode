@@ -72,7 +72,7 @@
 					"other_target_flags": ""
 				},
 				"optimization": {
-					"level": "more",
+					"level": "most",
 					"message_length": true,
 					"char_is_signed": true,
 					"function_sections": true,
