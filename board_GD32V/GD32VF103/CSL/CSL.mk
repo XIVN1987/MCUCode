@@ -1,6 +1,8 @@
 
 C_SRCS = \
 	CSL/RISCV/stubs/sbrk.c \
+	CSL/RISCV/stubs/fstat.c \
+	CSL/RISCV/stubs/isatty.c \
 	CSL/RISCV/core/n200_func.c \
 	CSL/RISCV/startup/handlers.c \
 	CSL/GD32VF103_standard_peripheral/system_gd32vf103.c \
