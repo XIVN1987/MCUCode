@@ -38,6 +38,8 @@ int main(void)
 	
 	gpio_init(LED_PORT, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, LED_PIN);
 	
+	uint32_t n_1ms = SystemCoreClock / 4000;
+
 	while(1)
 	{
 		Value = sines[n++];
@@ -48,8 +50,8 @@ int main(void)
 		SEGGER_RTT_printf(0, "%d %d, ", Value, Value2);
 
 		GPIO_BC(LED_PORT) = LED_PIN;
-		for(int i = 0; i < SystemCoreClock/1600; i++) __asm volatile ("nop");
+		for(int i = 0; i < n_1ms; i++) __asm volatile ("nop");
 		GPIO_BOP(LED_PORT) = LED_PIN;
-		for(int i = 0; i < SystemCoreClock/1600; i++) __asm volatile ("nop");
+		for(int i = 0; i < n_1ms; i++) __asm volatile ("nop");
 	}
 }

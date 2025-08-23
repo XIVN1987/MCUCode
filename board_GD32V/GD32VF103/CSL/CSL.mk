@@ -1,4 +1,4 @@
-
+vpath %.c . $(dir $(CSL_DIR))
 C_SRCS = \
 	CSL/RISCV/stubs/sbrk.c \
 	CSL/RISCV/stubs/fstat.c \
@@ -32,6 +32,8 @@ C_DEFS = \
 	-DUSE_STDPERIPH_DRIVER \
 	-DGD32VF103C_START
 
+
+vpath %.S . $(dir $(CSL_DIR))
 S_SRCS = \
 	CSL/RISCV/startup/entry.S \
 	CSL/RISCV/startup/start.S

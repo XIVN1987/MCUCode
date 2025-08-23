@@ -32,12 +32,10 @@ DEPS = $(addprefix $(BUILD_DIR)/,$(C_SRCS:.c=.d) $(S_SRCS:.S=.d))
 
 all: $(BUILD_DIR)/$(EXE).bin $(BUILD_DIR)/$(EXE).dis
 
-vpath %.c . $(dir $(CSL_DIR))
 $(BUILD_DIR)/%.o: %.c
 	mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) $< -o $@
 
-vpath %.S . $(dir $(CSL_DIR))
 $(BUILD_DIR)/%.o: %.S
 	mkdir -p $(dir $@)
 	$(AS) -c $(SFLAGS) $< -o $@
