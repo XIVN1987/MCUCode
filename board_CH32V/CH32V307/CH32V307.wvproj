@@ -41,7 +41,8 @@
 				"post_script_description": "",
 				"excludeResources": [
 					"${project}/Startup/startup_ch32v30x_D8.S",
-					"${project}/src/Startup/startup_ch32v30x_D8.S"
+					"${project}/src/Startup/startup_ch32v30x_D8.S",
+					"${project}/src/CSL/Startup/startup_ch32v30x_D8.S"
 				],
 				"riscvTargetProcessor": {
 					"architecture": "rv32i",
@@ -118,7 +119,7 @@
 					},
 					"includes": {
 						"include_paths": [
-							"${project}/src/Startup"
+							"${project}/src/CSL/Startup"
 						],
 						"include_system_paths": [],
 						"include_files": []
@@ -141,8 +142,9 @@
 					},
 					"includes": {
 						"include_paths": [
-							"${project}/src/Peripheral",
-							"${project}/src/Startup",
+							"${project}/src/CSL/Peripheral",
+							"${project}/src/CSL/Startup",
+							"${project}/src/CSL",
 							"${project}/src"
 						],
 						"include_system_paths": [],
@@ -207,7 +209,7 @@
 				"clinker": {
 					"general": {
 						"scriptFiles": [
-							"${project}/src/Link.ld"
+							"${project}/src/CSL/Startup/ch32v30x.ld"
 						],
 						"do_not_use_standard_start_files": true,
 						"do_not_use_default_libraries": false,
@@ -243,7 +245,7 @@
 				"cpplinker": {
 					"general": {
 						"scriptFiles": [
-							"${project}/src/Link.ld"
+							"${project}/src/CSL/Startup/ch32v30x.ld"
 						],
 						"do_not_use_standard_start_files": true,
 						"do_not_use_default_libraries": false,
