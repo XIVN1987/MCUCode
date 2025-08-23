@@ -11,6 +11,8 @@ void hw_init(void)
 	SerialInit();
 	
 	SysTick_Config(SystemCoreClock / 100);
+	
+	printf("SystemCoreClock = %d\n\n", SystemCoreClock);
 }
 
 

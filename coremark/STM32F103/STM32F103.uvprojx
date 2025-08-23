@@ -314,7 +314,7 @@
           <Cads>
             <interw>1</interw>
             <Optim>3</Optim>
-            <oTime>0</oTime>
+            <oTime>1</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>0</OneElfS>
             <Strict>0</Strict>
@@ -337,7 +337,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F10X_MD USE_STDPERIPH_DRIVER ITERATIONS=1000</Define>
+              <Define>STM32F10X_MD USE_STDPERIPH_DRIVER ITERATIONS=2000</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\board_STM32\STM32F103\src\CSL;..\..\board_STM32\STM32F103\src\CSL\CMSIS\CoreSupport;..\..\board_STM32\STM32F103\src\CSL\CMSIS\DeviceSupport;..\..\board_STM32\STM32F103\src\CSL\STM32F10x_StdPeriph_Driver;.\src;..\coremark</IncludePath>
             </VariousControls>

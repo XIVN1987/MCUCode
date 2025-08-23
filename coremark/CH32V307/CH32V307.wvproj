@@ -147,7 +147,7 @@
 						"do_not_search_system_directories": false,
 						"preprocess_only": false,
 						"defined_symbols": [
-							"ITERATIONS=4000"
+							"ITERATIONS=6000"
 						],
 						"undefined_symbols": []
 					},

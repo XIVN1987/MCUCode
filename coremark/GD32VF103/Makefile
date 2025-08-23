@@ -23,7 +23,7 @@ C_INCS += \
 	-I../coremark \
 
 C_DEFS += \
-	-DITERATIONS=3000 \
+	-DITERATIONS=4000 \
 
 
 OPT = -O2 -u _printf_float
