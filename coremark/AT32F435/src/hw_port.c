@@ -2,62 +2,29 @@
 
 #include "at32f435_437.h"
 
+volatile int SysTick_10ms = 0;
 
 void system_clock_config(void);
 void SerialInit(void);
 
-int main(void)
+void hw_init(void)
 {
-	gpio_init_type gpio_init_struct;
-	gpio_default_para_init(&gpio_init_struct);
-	
 	system_clock_config();
 	
 	SerialInit();
 	
-	crm_periph_clock_enable(CRM_GPIOA_PERIPH_CLOCK, TRUE);
-	crm_periph_clock_enable(CRM_GPIOB_PERIPH_CLOCK, TRUE);
+	SysTick_Config(SystemCoreClock / 100);
 	
-	gpio_init_struct.gpio_pins = GPIO_PINS_15;		// KEY
-	gpio_init_struct.gpio_mode = GPIO_MODE_INPUT;
-	gpio_init_struct.gpio_pull = GPIO_PULL_UP;
-	gpio_init(GPIOA, &gpio_init_struct);
-	
-	gpio_init_struct.gpio_pins = GPIO_PINS_15;		// LED
-	gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
-	gpio_init(GPIOB, &gpio_init_struct);
-	
-	while(1)
-	{
-		gpio_bits_write(GPIOB, GPIO_PINS_15, gpio_output_data_bit_read(GPIOB, GPIO_PINS_15) ? FALSE : TRUE);
-		
-		if(gpio_input_data_bit_read(GPIOA, GPIO_PINS_15) == 0) printf("Key Pressed!\n");
-		else                                              	   printf("Hi From AT32F435!\n");
-		
-		for(int i = 0; i < system_core_clock / 10; i++) __NOP();
-	}
+	printf("SystemCoreClock = %d\n\n", SystemCoreClock);
 }
 
 
-/**
-  * @brief  system clock config program
-  * @note   the system clock is configured as follow:
-  *         system clock (sclk)   = (hext * pll_ns)/(pll_ms * pll_fr)
-  *         system clock source   = pll (hext)
-  *         - hext                = HEXT_VALUE
-  *         - sclk                = 288000000
-  *         - ahbdiv              = 1
-  *         - ahbclk              = 288000000
-  *         - apb2div             = 2
-  *         - apb2clk             = 144000000
-  *         - apb1div             = 2
-  *         - apb1clk             = 144000000
-  *         - pll_ns              = 144
-  *         - pll_ms              = 1
-  *         - pll_fr              = 4
-  * @param  none
-  * @retval none
-  */
+void SysTick_Handler(void)
+{
+	SysTick_10ms++;
+}
+
+
 void system_clock_config(void)
 {
   /* reset crm */

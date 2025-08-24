@@ -1,3 +1,26 @@
+## AT32F435
+```
+SystemCoreClock = 288000000
+
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 1586
+Total time (secs): 15.860000
+Iterations/Sec   : 756.620429
+Iterations       : 12000
+Compiler version : MDK
+Compiler flags   : -O3
+Memory location  : Flash
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xd340
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 756.620429 / MDK -O3 / Flash
+```
+756.62 / 288MHz = 2.62/MHz
+
 ## CH32V307
 ```
 SystemCoreClock = 144000000

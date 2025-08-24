@@ -48,7 +48,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\out\</OutputDirectory>
-          <OutputName>AT32F435</OutputName>
+          <OutputName>coremark</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -312,8 +312,8 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
-            <oTime>0</oTime>
+            <Optim>4</Optim>
+            <oTime>1</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>0</OneElfS>
             <Strict>0</Strict>
@@ -336,9 +336,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>AT32F435VG,USE_STDPERIPH_DRIVER, HEXT_VALUE=12000000</Define>
+              <Define>AT32F435VG,USE_STDPERIPH_DRIVER, HEXT_VALUE=12000000, ITERATIONS=12000</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src\CSL\AT32F43x_StdPeriph_Driver;.\src\CSL\CMSIS\DeviceSupport;.\src\CSL\CMSIS\CoreSupport;.\src\CSL;.\src</IncludePath>
+              <IncludePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver;..\..\board_STM32\AT32F435\src\CSL\CMSIS\DeviceSupport;..\..\board_STM32\AT32F435\src\CSL\CMSIS\CoreSupport;..\..\board_STM32\AT32F435\src\CSL;.\src;..\coremark</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -383,9 +383,44 @@
           <GroupName>APP</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>hw_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\main.c</FilePath>
+              <FilePath>.\src\hw_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_portme.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\core_portme.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>coremark</GroupName>
+          <Files>
+            <File>
+              <FileName>core_list_join.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\coremark\core_list_join.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\coremark\core_main.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_matrix.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\coremark\core_matrix.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_state.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\coremark\core_state.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_util.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\coremark\core_util.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -395,12 +430,12 @@
             <File>
               <FileName>system_at32f435_437.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\CMSIS\DeviceSupport\system_at32f435_437.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\CMSIS\DeviceSupport\system_at32f435_437.c</FilePath>
             </File>
             <File>
               <FileName>startup_at32f435_437.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\src\CSL\CMSIS\DeviceSupport\startup\mdk\startup_at32f435_437.s</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\CMSIS\DeviceSupport\startup\mdk\startup_at32f435_437.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -410,142 +445,142 @@
             <File>
               <FileName>at32f435_437_acc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_acc.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_acc.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_adc.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_adc.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_can.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_can.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_crc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_crc.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_crc.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_crm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_crm.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_crm.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_dac.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_dac.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_dac.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_debug.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_debug.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_debug.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_dma.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_dma.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_dvp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_dvp.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_dvp.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_edma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_edma.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_edma.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_emac.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_emac.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_emac.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_ertc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_ertc.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_ertc.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_exint.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_exint.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_exint.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_flash.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_flash.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_gpio.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_gpio.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_i2c.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_i2c.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_misc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_misc.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_misc.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_pwc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_pwc.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_pwc.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_qspi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_qspi.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_qspi.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_scfg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_scfg.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_scfg.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_sdio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_sdio.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_sdio.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_spi.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_spi.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_tmr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_tmr.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_tmr.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_usart.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_usart.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_usb.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_usb.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_usb.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_wdt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_wdt.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_wdt.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_wwdt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_wwdt.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_wwdt.c</FilePath>
             </File>
             <File>
               <FileName>at32f435_437_xmc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_xmc.c</FilePath>
+              <FilePath>..\..\board_STM32\AT32F435\src\CSL\AT32F43x_StdPeriph_Driver\at32f435_437_xmc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -558,5 +593,14 @@
     <components/>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>AT32F435</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
