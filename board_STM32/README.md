@@ -6,6 +6,14 @@ view board Sch & PCB online: [https://oshwhub.com/xivn1987/stm32c8](https://oshw
 ![](./STM32C8.png)
 
 
+# STM32RC
+STM32F103RC demo board, used for code testing.
+
+view board Sch & PCB online: [https://oshwhub.com/xivn1987/stm32rc](https://oshwhub.com/xivn1987/stm32rc)
+
+![](./STM32RC.png)
+
+
 # STM32VG
 STM32F405VG demo board, used for code testing.
 
