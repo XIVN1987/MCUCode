@@ -28,7 +28,10 @@ int main(void)
 	{
 		GPIO_WriteBit(GPIOB, GPIO_Pin_15, GPIO_ReadOutputDataBit(GPIOB, GPIO_Pin_15) ? Bit_RESET : Bit_SET);
 		
-		printf("Hi from STM32F103\n");
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_15) == 0)
+			printf("Key Pressed\n");
+		else
+			printf("Hi from STM32F103\n");
 		
 		for(int i = 0; i < SystemCoreClock / 8; i++) __NOP();
 	}
