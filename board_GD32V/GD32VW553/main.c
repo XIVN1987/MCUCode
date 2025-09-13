@@ -11,22 +11,22 @@ void SerialInit(void);
 
 int main(void)
 {
-	SystemInit();
-
 	SerialInit();
 
 	rcu_periph_clock_enable(LED_PCLK);
 	
 	gpio_mode_set(LED_PORT, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, LED_PIN);
 	
+	int delay_cycles = SystemCoreClock / 256;
+
 	while(1)
 	{
 		printf("Hi from GD32VW553\n");
 
 		gpio_bit_set(LED_PORT, LED_PIN);
-		for(int i = 0; i < SystemCoreClock/16; i++) __NOP();
+		for(int i = 0; i < delay_cycles; i++) __NOP();
 		gpio_bit_reset(LED_PORT, LED_PIN);
-		for(int i = 0; i < SystemCoreClock/16; i++) __NOP();
+		for(int i = 0; i < delay_cycles; i++) __NOP();
 	}
 }
 
