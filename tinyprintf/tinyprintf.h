@@ -7,6 +7,7 @@ Copyright (C) 2004  Kustaa Nyholm
 #define __TFP_PRINTF__
 
 #include <stdint.h>
+#include <stddef.h>		// for size_t
 #include <stdarg.h>
 
 
@@ -19,6 +20,7 @@ typedef void (*putcf) (void *, char);
 
 void tfp_format(void *putp, putcf putf, const char *fmt, va_list va);
 
+void init_printf(void *putp, putcf putf);
 void tfp_printf(char *fmt, ...);
 
 int tfp_sprintf(char *str, const char *fmt, ...);
