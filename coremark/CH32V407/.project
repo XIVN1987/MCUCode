@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <projectDescription>
-  <name>CH32V307</name>
+  <name>CH32V407</name>
   <comment/>
   <projects/>
   <buildSpec>
@@ -24,12 +24,12 @@
     <link>
       <name>CSL</name>
       <type>2</type>
-      <locationURI>PARENT-2-PROJECT_LOC/board_CH32V/CH32V307/src/CSL</locationURI>
+      <location>PARENT-2-PROJECT_LOC/board_CH32V/CH32V407/src/CSL</location>
     </link>
     <link>
       <name>coremark</name>
       <type>2</type>
-      <locationURI>PARENT-1-PROJECT_LOC/coremark</locationURI>
+      <location>PARENT-1-PROJECT_LOC/coremark</location>
     </link>
   </linkedResources>
   <filteredResources>

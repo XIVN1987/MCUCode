@@ -26,7 +26,7 @@
   <stringAttribute key="com.mounriver.debug.gdbjtag.openocd.gdbServerTclPortNumber" value="6666"/>
   <stringAttribute key="com.mounriver.debug.gdbjtag.openocd.gdbServerOther" value="-f &quot;${eclipse_home}toolchain/OpenOCD/bin/wch-riscv.cfg&quot;"/>
   <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.ipAddress" value="localhost"/>
-  <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="${eclipse_home}toolchain/RISC-V Embedded GCC12/bin/riscv-none-elf-gdb.exe"/>
+  <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="${eclipse_home}toolchain/RISC-V Embedded GCC15/bin/riscv32-wch-elf-gdb.exe"/>
   <stringAttribute key="com.mounriver.debug.gdbjtag.openocd.gdbClientOtherOptions" value=""/>
   <stringAttribute key="com.mounriver.debug.gdbjtag.openocd.gdbClientOtherCommands" value="set mem inaccessible-by-default off&#xD;&#xA;set architecture riscv:rv32&#xD;&#xA;set remotetimeout unlimited&#xD;&#xA;set disassembler-options xw"/>
   <stringAttribute key="com.mounriver.debug.gdbjtag.openocd.firstResetType" value="init"/>
@@ -39,9 +39,9 @@
   <stringAttribute key="com.mounriver.debug.gdbjtag.openocd.otherRunCommands" value=""/>
   <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.stopAt" value="handle_reset"/>
   <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.pcRegister" value=""/>
-  <stringAttribute key="com.mounriver.debug.gdbjtag.svdPath" value="${eclipse_home}template/wizard/WCH/RISC-V/CH32V307/NoneOS/CH32V307xx.svd"/>
-  <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="obj/CH32V307.elf"/>
-  <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="CH32V307"/>
+  <stringAttribute key="com.mounriver.debug.gdbjtag.svdPath" value="${eclipse_home}template/wizard/WCH/RISC-V/CH32V4X7/NoneOS/CH32V4X7.svd"/>
+  <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="obj/CH32V407.elf"/>
+  <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="CH32V407"/>
   <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
   <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.jtagDevice" value="GNU MCU OpenOCD"/>
   <stringAttribute key="com.mounriver.debug.gdbjtag.openocd.gdbServerConnectionAddress" value=""/>
@@ -54,7 +54,7 @@
   <intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.portNumber" value="3333"/>
   <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
   <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-    <listEntry value="CH32V307"/>
+    <listEntry value="CH32V407"/>
   </listAttribute>
   <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
     <listEntry value="4"/>

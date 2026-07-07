@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-#include "ch32v30x.h"
+#include "ch32v4x7.h"
 
 
 void SerialInit(void);
@@ -29,12 +28,12 @@ void SerialInit(void)
     GPIO_InitTypeDef  GPIO_InitStructure;
 	USART_InitTypeDef USART_InitStructure;
 
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+	RCC_PB2PeriphClockCmd(RCC_PB2Periph_GPIOA, ENABLE);
+	RCC_PB2PeriphClockCmd(RCC_PB2Periph_USART1, ENABLE);
 
 	GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_9;
 	GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_Medium;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);              // PA9  => USART1_TX
 
 	GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_10;

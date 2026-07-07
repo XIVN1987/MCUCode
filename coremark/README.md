@@ -44,6 +44,29 @@ CoreMark 1.0 : 382.165605 / GCC12.2.0 -O3 / Flash
 ```
 382.16 / 144MHz = 2.65/MHz
 
+## CH32V407
+```
+SystemCoreClock = 200000000
+
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 1452
+Total time (secs): 14.520000
+Iterations/Sec   : 619.834711
+Iterations       : 9000
+Compiler version : GCC15.2.0
+Compiler flags   : -O3
+Memory location  : Flash
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x382f
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 619.834711 / GCC15.2.0 -O3 / Flash
+```
+619.83 / 200MHz = 3.10/MHz
+
 ## GD32VF103
 ```
 SystemCoreClock = 96000000
