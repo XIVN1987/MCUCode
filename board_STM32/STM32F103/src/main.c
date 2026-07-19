@@ -15,20 +15,20 @@ int main(void)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
 	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_15;		// KEY
-	GPIO_initStruct.GPIO_Mode = GPIO_Mode_IPU;
+	GPIO_initStruct.GPIO_Pin = GPIO_Pin_0;		// KEY
+	GPIO_initStruct.GPIO_Mode = GPIO_Mode_IPD;
 	GPIO_Init(GPIOA, &GPIO_initStruct);
 	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_15;		// LED
+	GPIO_initStruct.GPIO_Pin = GPIO_Pin_2;		// LED
 	GPIO_initStruct.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_initStruct.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_initStruct);
 	
 	while(1)
 	{
-		GPIO_WriteBit(GPIOB, GPIO_Pin_15, GPIO_ReadOutputDataBit(GPIOB, GPIO_Pin_15) ? Bit_RESET : Bit_SET);
+		GPIO_WriteBit(GPIOB, GPIO_Pin_2, GPIO_ReadOutputDataBit(GPIOB, GPIO_Pin_2) ? Bit_RESET : Bit_SET);
 		
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_15) == 0)
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == 1)
 			printf("Key Pressed\n");
 		else
 			printf("Hi from STM32F103\n");
