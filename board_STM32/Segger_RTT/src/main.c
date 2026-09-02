@@ -25,6 +25,8 @@ volatile int8_t Value2;
 
 void SerialInit(void);
 
+char Buffer[128];
+
 int main(void)
 {
 	uint32_t n = 0;
@@ -40,9 +42,14 @@ int main(void)
 		if(n == sizeof(sines))
 			n = 0;
 		
-		printf("%d %d, ", Value, Value2);
-		
 		SEGGER_RTT_printf(0, "%d %d, ", Value, Value2);
+		
+		if(SEGGER_RTT_HasData(0))
+		{
+			int nx = SEGGER_RTT_Read(0, Buffer, 128-1);
+			Buffer[nx] = '\0';
+			printf("%s", Buffer);
+		}
 		
 		for(int i = 0; i < SystemCoreClock/1024; i++) __NOP();
 	}
