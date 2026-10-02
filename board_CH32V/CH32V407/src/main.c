@@ -13,7 +13,7 @@ int main(void)
 	RCC_PB2PeriphClockCmd(RCC_PB2Periph_GPIOC, ENABLE);
 	RCC_PB2PeriphClockCmd(RCC_PB2Periph_GPIOD, ENABLE);
 	
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_1;		// LED
+	GPIO_initStruct.GPIO_Pin = GPIO_Pin_2;		// LED
 	GPIO_initStruct.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_initStruct.GPIO_Speed = GPIO_Speed_Medium;
 	GPIO_Init(GPIOC, &GPIO_initStruct);
@@ -24,7 +24,7 @@ int main(void)
 	
 	while(1)
 	{
-		GPIO_WriteBit(GPIOC, GPIO_Pin_1, GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_1) ? Bit_RESET : Bit_SET);
+		GPIO_WriteBit(GPIOC, GPIO_Pin_2, GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_2) ? Bit_RESET : Bit_SET);
 		
 		if(GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_2) == 0)
 			printf("Key pressed\n");
